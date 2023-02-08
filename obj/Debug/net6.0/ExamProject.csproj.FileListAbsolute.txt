@@ -1,0 +1,15 @@
+E:\I T I\CU,net\C#\ExamProject\bin\Debug\net6.0\ExamProject.exe
+E:\I T I\CU,net\C#\ExamProject\bin\Debug\net6.0\ExamProject.deps.json
+E:\I T I\CU,net\C#\ExamProject\bin\Debug\net6.0\ExamProject.runtimeconfig.json
+E:\I T I\CU,net\C#\ExamProject\bin\Debug\net6.0\ExamProject.dll
+E:\I T I\CU,net\C#\ExamProject\bin\Debug\net6.0\ExamProject.pdb
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.csproj.AssemblyReference.cache
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.AssemblyInfoInputs.cache
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.AssemblyInfo.cs
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.csproj.CoreCompileInputs.cache
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.dll
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\refint\ExamProject.dll
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.pdb
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ExamProject.genruntimeconfig.cache
+E:\I T I\CU,net\C#\ExamProject\obj\Debug\net6.0\ref\ExamProject.dll
