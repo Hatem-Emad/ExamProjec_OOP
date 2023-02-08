@@ -25,7 +25,7 @@
             exam.ShowExam();
 
             Console.WriteLine($"=====================================\n" +
-                $"===||Your Result is {exam.Marks} out of 30||===" +
+                $"===||Your Result is {exam.Marks} out of {exam.Questions.Length * 5}||===" +
                 $"\n=====================================");
             if(ExamType== 1)
             {
