@@ -18,8 +18,8 @@ namespace ExamProject
             Console.WriteLine($"The Number Of Questions is: {NofQuestions} \nThe Exam Time is: {ExamTime}");
             for(int i = 0; i < Questions!.Length; i++)
             {
-                string StAns;
-                if (Questions[i].type == 1)
+                string? StAns;
+                if (Questions[i].Type == 1)
                 {
                     Console.WriteLine($"\n{Questions[i].Header}");
                     do
@@ -30,10 +30,10 @@ namespace ExamProject
 
                     if (StAns.ToLower() == Questions[i].ModAns)
                     {
-                        Marks += 4;
+                        Marks += 5;
                     }
 
-                } else if(Questions[i].type == 2) 
+                } else if(Questions[i].Type == 2) 
                 {
                     Console.WriteLine($"\n{Questions[i].Header}");
 
@@ -44,10 +44,10 @@ namespace ExamProject
                     } while (!Enum.IsDefined(typeof(MC), StAns));
                     if (StAns.ToLower() == Questions[i].ModAns)
                     {
-                        Marks += 4;
+                        Marks += 5;
                     }
 
-                }else if (Questions[i].type == 3) 
+                }else if (Questions[i].Type == 3) 
                 {
                     Console.WriteLine($"\n{Questions[i].Header}");
 
@@ -56,11 +56,10 @@ namespace ExamProject
                         Console.WriteLine($"Q{i + 1} {Questions[i].Body}{Questions[i].Answers.Ans}");
                         StAns = Console.ReadLine();
                     } while (Checker.MC(StAns));
-                    if (StAns.ToLower() == Questions[i].ModAns)
-                    {
-                        Marks += 4;
-                    }
 
+                    //To Validate that a-d-b == a-b-d
+                    if (Checker.TwoStrings(StAns, Questions[i].ModAns)) Marks += 5;
+                   
                 }
             }
 

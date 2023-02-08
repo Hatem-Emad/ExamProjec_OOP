@@ -8,12 +8,12 @@ namespace ExamProject
 {
     public abstract class Question
     {
-        public int Mark { get { return 4; } }
+        public int Mark { get { return 5; } }
         public abstract string Header { get; }
         public abstract string Body { get; set; }
         public abstract string ModAns { get; set; }
         public abstract Answer Answers { get; set; }
-        public abstract int type { get; set; }
+        public abstract int Type { get; set; }
     }
     public class QTorF : Question
     {
@@ -21,7 +21,7 @@ namespace ExamProject
         public override Answer Answers { get { return new ATorF(); } set {; } }
         public override string Body { get; set; }
         public override string ModAns { get; set; }
-        public override int type { get { return 1; }  set {; } }
+        public override int Type { get { return 1; }  set {; } }
         public QTorF(string body, string mdAns)
         {
             Body = body;
@@ -34,7 +34,7 @@ namespace ExamProject
         public override Answer Answers { get; set; }
         public override string ModAns { get; set; }
         public override string Body { get; set; }
-        public override int type { get { return 2; } set {; } }
+        public override int Type { get { return 2; } set {; } }
         public QCO(string body, string ans, string mdAns)
         {
             Body = body;
@@ -48,7 +48,7 @@ namespace ExamProject
         public override Answer Answers { get; set; }
         public override string ModAns { get; set; }
         public override string Body { get; set; }
-        public override int type { get { return 3; }  set {; } }
+        public override int Type { get { return 3; }  set {; } }
         public QMC(string body, string ans, string mdAns)
         {
             Body = body;
