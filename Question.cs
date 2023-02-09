@@ -17,7 +17,7 @@ namespace ExamProject
     }
     public class QTorF : Question
     {
-        public override string Header { get { return "Write A for True or B for False\n"; } }
+        public override string Header { get { return "Write A for True or B for False "; } }
         public override Answer Answers { get { return new ATorF(); } set {; } }
         public override string Body { get; set; }
         public override string ModAns { get; set; }
@@ -30,7 +30,7 @@ namespace ExamProject
     }
     public class QCO : Question
     {
-        public override string Header { get { return "Choose A B C or D\n"; } }
+        public override string Header { get { return "Choose A B C or D "; } }
         public override Answer Answers { get; set; }
         public override string ModAns { get; set; }
         public override string Body { get; set; }
@@ -44,7 +44,7 @@ namespace ExamProject
     }
     public class QMC : Question
     {
-        public override string Header { get { return "Choose A-B or A-B-C or A-B-D or B-C-D ..etc \n"; } }
+        public override string Header { get { return "Choose A-B or A-B-C or A-B-D or B-C-D ..etc "; } }
         public override Answer Answers { get; set; }
         public override string ModAns { get; set; }
         public override string Body { get; set; }

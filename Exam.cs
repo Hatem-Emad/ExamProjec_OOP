@@ -21,60 +21,41 @@ namespace ExamProject
                 string? StAns;
                 if (Questions[i].Type == 1)
                 {
-                    Console.WriteLine($"\n{Questions[i].Header}");
+                    Console.WriteLine($"\n{Questions[i].Header} \t\t\t ({Questions[i].Mark} Marks) ");
                     do
                     {
-                        Console.WriteLine($"Q{i + 1} {Questions[i].Body}{Questions[i].Answers.Ans}");
+                        Console.WriteLine($"Q{i + 1}) {Questions[i].Body}{Questions[i].Answers.Ans}");
                         StAns = Console.ReadLine();
                     } while (StAns != "A" && StAns != "B" && StAns != "a" && StAns != "b");
 
-                    if (StAns.ToLower() == Questions[i].ModAns)
-                    {
-                        Marks += 5;
-                    }
-
+                    if (StAns.ToLower() == Questions[i].ModAns)     Marks += Questions[i].Mark;
+                    
                 } else if(Questions[i].Type == 2) 
                 {
-                    Console.WriteLine($"\n{Questions[i].Header}");
+                    Console.WriteLine($"\n{Questions[i].Header} \t\t\t ({Questions[i].Mark} Marks)");
 
                     do
                     {
-                        Console.WriteLine($"Q{i + 1} {Questions[i].Body}{Questions[i].Answers.Ans}");
+                        Console.WriteLine($"Q{i + 1}) {Questions[i].Body}{Questions[i].Answers.Ans}");
                         StAns = Console.ReadLine();
                     } while (!Enum.IsDefined(typeof(MC), StAns));
-                    if (StAns.ToLower() == Questions[i].ModAns)
-                    {
-                        Marks += 5;
-                    }
+                    if (StAns?.ToLower() == Questions[i].ModAns)     Marks += Questions[i].Mark;
 
-                }else if (Questions[i].Type == 3) 
+                } else if (Questions[i].Type == 3) 
                 {
-                    Console.WriteLine($"\n{Questions[i].Header}");
+                    Console.WriteLine($"\n{Questions[i].Header} \t\t\t ({Questions[i].Mark} Marks)");
 
                     do
                     {
-                        Console.WriteLine($"Q{i + 1} {Questions[i].Body}{Questions[i].Answers.Ans}");
+                        Console.WriteLine($"Q{i + 1}) {Questions[i].Body}{Questions[i].Answers.Ans}");
                         StAns = Console.ReadLine();
                     } while (Checker.MC(StAns));
 
                     //To Validate that a-d-b == a-b-d
-                    if (Checker.TwoStrings(StAns, Questions[i].ModAns)) Marks += 5;
-                   
+                    if (Checker.TwoStrings(StAns, Questions[i].ModAns)) Marks += Questions[i].Mark;
+      
                 }
             }
-
-        }
-    }
-
-    public class FinalExam : Exam
-    {
-        
-    }
-    public class PracticalExam : Exam
-    {
-        public string showModelAnswer(int i)
-        {
-            return " ";
         }
     }
 }

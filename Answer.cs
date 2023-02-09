@@ -13,7 +13,7 @@ namespace ExamProject
     }
     public class ATorF : Answer
     {
-        public override string Ans { get { return "A- True, B- False"; }  set {; } }
+        public override string Ans { get { return " \nA- True, B- False"; }  set {; } }
 
     }
     public class ACO : Answer

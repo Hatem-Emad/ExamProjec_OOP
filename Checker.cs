@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace ExamProject
 {
-    enum MC
+    enum MC : byte
     {
         A = 0, a = 0, B = 1, b = 1, C = 2, c = 2, D = 3, d = 3
     }
     static public class Checker
     {
-        public static bool MC(string str) 
+        public static bool MC(string? str) 
         {
-            string[] Strarr = str.Split("-"); 
+            string[]? Strarr = str?.Split("-"); 
             
-            if (!(Strarr.Length > 1)) return true;      //Enter at leaset 2 choices
+            if (!(Strarr?.Length > 1)) return true;      //Enter at leaset 2 choices
 
             foreach (var i in Strarr) { if (!Enum.IsDefined(typeof(MC), i)) return true; }      //Every choice must be enum
 
@@ -31,14 +31,14 @@ namespace ExamProject
             return false;
         }
 
-        public static bool TwoStrings(string str1, string str2)
+        public static bool TwoStrings(string? str1, string? str2)
         {
-            str1 = str1.ToLower();
-            string[] str1Arr = str1.Split("-");
+            str1 = str1?.ToLower();
+            string[]? str1Arr = str1?.Split("-");
             Array.Sort(str1Arr);
 
-            str2 = str2.ToLower();
-            string[] str2Arr = str2.Split("-");
+            str2 = str2?.ToLower();
+            string[]? str2Arr = str2?.Split("-");
             Array.Sort(str2Arr);
 
             return str1Arr.SequenceEqual(str2Arr);

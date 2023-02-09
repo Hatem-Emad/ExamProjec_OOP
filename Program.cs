@@ -15,16 +15,16 @@
             exam.NofQuestions = 6;
             exam.ExamTime = 60;
             exam.Questions = new Question[] {
-                new QTorF("Flowers are plants \n", "a"),
-                new QTorF("Cats are animale \n", "a"),
-                new QCO("Humans live on \n", "A) Moon  B) Earth  C) Sky  D) Mars)", "b"),
-                new QCO("pens are for \n", "A) reading  B) singing  C) writing D) dancing", "c"),
-                new QMC("We can Eat \n", "A) apples B) bananas C) ourselves D) meat", "a-b-d"),
-                new QMC("Where do the lions live \n", "A) zoo - B) cage - C) Sky - D) forest", "a-b-d"),
+                new QTorF("Flowers are plants ", "a"),
+                new QTorF("Cats are animale ", "a"),
+                new QCO("Humans live on ", " \nA) Moon  B) Earth  C) Sky  D) Mars)", "b"),
+                new QCO("pens are for ", " \nA) reading  B) singing  C) writing D) dancing", "c"),
+                new QMC("We can Eat ", " \nA) apples B) bananas C) ourselves D) meat", "a-b-d"),
+                new QMC("Where do the lions live ", " \nA) zoo - B) cage - C) Sky - D) forest", "a-b-d"),
             };
             exam.ShowExam();
 
-            Console.WriteLine($"=====================================\n" +
+            Console.WriteLine($" \n=====================================\n" +
                 $"===||Your Result is {exam.Marks} out of {exam.Questions.Length * 5}||===" +
                 $"\n=====================================");
             if(ExamType== 1)
