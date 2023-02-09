@@ -30,7 +30,7 @@ namespace ExamProject
     }
     public class QCO : Question
     {
-        public override string Header { get { return "Choose A B C or D "; } }
+        public override string Header { get { return "Choose A or B or C or D "; } }
         public override Answer Answers { get; set; }
         public override string ModAns { get; set; }
         public override string Body { get; set; }

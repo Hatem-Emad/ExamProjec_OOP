@@ -29,10 +29,12 @@
                 $"\n=====================================");
             if(ExamType== 1)
             {
-                Console.WriteLine("\nThe Model Answer is: \n\n" +
-                    "Q1) True \nQ2) True \nQ3) B \nQ4) C \nQ5) A-B-D \nQ6) A-B-D ");
+                Console.WriteLine("\nThe Model Answer is: \n");
+                for(int i=0; i< exam.Questions.Length; i++)
+                {
+                   Console.WriteLine($"Q{i+1}) {exam.Questions[i].ModAns.ToUpper()}");
+                }
             }
-
         }
     }
 }
